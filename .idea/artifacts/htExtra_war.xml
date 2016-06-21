@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="htExtra:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="htwebExtra.war">
+      <element id="artifact" artifact-name="htExtra:war exploded" />
+    </root>
+  </artifact>
+</component>
