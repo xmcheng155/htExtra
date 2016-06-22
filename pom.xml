@@ -62,7 +62,12 @@
       <artifactId>cglib-nodep</artifactId>
       <version>3.2.3</version>
     </dependency>
-
+    <!--日志配置-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.2</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>htwebExtra</finalName>
