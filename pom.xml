@@ -62,6 +62,11 @@
       <artifactId>cglib-nodep</artifactId>
       <version>3.2.3</version>
     </dependency>
+    <dependency>
+      <groupId>com.oracle.jdbc</groupId>
+      <artifactId>ojdbc7</artifactId>
+      <version>12.1.0.2</version>
+    </dependency
     <!--日志配置-->
     <dependency>
       <groupId>org.slf4j</groupId>
