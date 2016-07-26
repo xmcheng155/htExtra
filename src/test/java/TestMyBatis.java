@@ -28,9 +28,9 @@ public class TestMyBatis {
 
     @Test
     public void test1() {
-        Inpatient inp = inpatientService.getInpatientByIpid("ZY010016209637");
+        Inpatient inp = inpatientService.getInpatientByIpid("ZY010016118941");
         // System.out.println(user.getUserName());
-         logger.info("值："+inp.getPatientName());
+         logger.info("值："+inp.getHospitalDischargeTime());
         logger.info(JSON.toJSONString(inp));
     }
 
