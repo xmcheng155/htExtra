@@ -9,6 +9,9 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js"></script>
 </head>
 <body>
 姓名： ${inp.ipid}
