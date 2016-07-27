@@ -18,7 +18,7 @@ public class TestMyBatis {
     private static Logger logger = Logger.getLogger(TestMyBatis.class);
     //	private ApplicationContext ac = null;
     @Resource
-    private InpatientService inpatientService= null;
+    private InpatientService inpatientService;
 
 //	@Before
 //	public void before() {

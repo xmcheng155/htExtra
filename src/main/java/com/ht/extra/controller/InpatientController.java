@@ -1,5 +1,6 @@
 package com.ht.extra.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.ht.extra.pojo.Inpatient;
 import com.ht.extra.service.InpatientService;
 import org.springframework.stereotype.Controller;
@@ -14,14 +15,17 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Controller
-@RequestMapping("/Inpatient")
+@RequestMapping("/inpatient")
 public class InpatientController {
     @Resource
     private InpatientService inpatientService;
     @RequestMapping("/showInp")
     public String showMsg(HttpServletRequest request, Model model){
         String ipid = request.getParameter("id");
-        Inpatient inp = this.inpatientService.getInpatientByIpid(ipid);
+        System.out.println("ipid==>"+ipid);
+        Inpatient inp = inpatientService.getInpatientByIpid("ZY010016118941");
+        System.out.println(JSON.toJSONString(inp));
+        model.addAttribute("inp",inp);
         return "showInp";
     }
 
