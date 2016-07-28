@@ -135,7 +135,13 @@
     ADMISSION_INSURE_TIME, HEAD_NURSE_SUBMIT, HLZZ_SUBMIT, PIGEONHOLE_NO
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
+    select
+    <include refid="Base_Column_List" />
+    from ADT.INPATIENT
+    <![CDATA[ where ADMISSION_TIME > #{0} and ADMISSION_TIME < #{1}]]>
+  </select>
+  <select id="selectByTime" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
     <include refid="Base_Column_List" />
     from ADT.INPATIENT
     where IPID = #{ipid,jdbcType=VARCHAR}
