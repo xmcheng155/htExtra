@@ -140,6 +140,12 @@
     from ADT.INPATIENT
     where IPID = #{ipid,jdbcType=VARCHAR}
   </select>
+  <select id="selectByOutTime" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from ADT.INPATIENT
+    <![CDATA[ where HOSPITAL_DISCHARGE_TIME >#{0} and HOSPITAL_DISCHARGE_TIME <#{1} ]]>
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from ADT.INPATIENT
     where IPID = #{ipid,jdbcType=VARCHAR}

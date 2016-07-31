@@ -2,6 +2,8 @@ package com.ht.extra.dao;
 
 import com.ht.extra.pojo.Inpatient;
 
+import java.util.List;
+
 public interface InpatientMapper {
     int deleteByPrimaryKey(String ipid);
 
@@ -14,4 +16,6 @@ public interface InpatientMapper {
     int updateByPrimaryKeySelective(Inpatient record);
 
     int updateByPrimaryKey(Inpatient record);
+
+    List<Inpatient> selectByOutTime(String time1,String time2);
 }
