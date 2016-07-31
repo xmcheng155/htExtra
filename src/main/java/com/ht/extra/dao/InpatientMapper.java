@@ -17,5 +17,5 @@ public interface InpatientMapper {
 
     int updateByPrimaryKey(Inpatient record);
 
-    List<Inpatient> selectByTime( String firstTime,String lastTime);
+    List<Inpatient> selectByOutTime(String time1,String time2);
 }

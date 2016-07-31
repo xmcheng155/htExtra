@@ -8,6 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by Dell on 2016/7/15.
@@ -28,10 +29,11 @@ public class TestMyBatis {
 
     @Test
     public void test1() {
-        Inpatient inp = inpatientService.getInpatientByIpid("ZY010016118941");
+        List<Inpatient> inps = inpatientService.getInpaientsByOutTime("20160728071010","20160728101010");
         // System.out.println(user.getUserName());
-         logger.info("值："+inp.getHospitalDischargeTime());
-        logger.info(JSON.toJSONString(inp));
+        // logger.info("值："+inp.getHospitalDischargeTime());
+        logger.info("size"+inps.size());
+        logger.info(JSON.toJSONString(inps));
     }
 
 }

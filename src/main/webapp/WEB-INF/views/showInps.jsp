@@ -6,14 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.ht.extra.pojo.Inpatient"%>
+<jsp:useBean id="inps"  class="java.util.ArrayList" scope="request"/>
 <html>
 <head>
     <title>Title</title>
-    <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <script src="../../js/jquery-3.1.0.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
 </head>
-<body>
 <body>
 <table class="table table-bordered">
 <thead>
@@ -23,18 +24,14 @@
     </tr>
 </thead>
 <tbody>
+<% for(int i=0;i<inps.size();i++) {
+    Inpatient inp = (Inpatient) inps.get(i);
+%>
     <tr>
-        <td>${inp.ipid}</td>
-        <td>${inp.pid}</td>
+        <td><%=inp.getPatientName()%></td>
+        <td><%=inp.getAdmissionDept()%></td>
     </tr>
-    <tr>
-        <td>${inp.ipid}</td>
-        <td>${inp.pid}</td>
-    </tr>
-    <tr>
-        <td>${inp.ipid}</td>
-        <td>${inp.pid}</td>
-    </tr>
+<% }%>
 </tbody>
 </table>
 </body>
